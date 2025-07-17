@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+
+}
+
+
+.header {
+    display: grid;
+    justify-content:end; 
+     
+    border-bottom: 2px solid #333;
+    animation-name: toptobuttom;
+    animation-duration: 2s;
+    transform: translateY(100%);
+    width: 100%;
+}
+
+
+.header li {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+} 
+
+.main-header{
+    color:black;
+    padding: 3px;
+}
+.main-header:hover {
+    color: brown;
+    background-color: aqua;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: 30px;
+    /* margin: 30px 50px; */
+    
+}  
+
+
+.left-1 {
+    margin-top: 5px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    background-color: bisque;
+    height: 100%;
+    border-right: 5px solid black;
+}
+
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 900;
+    line-height: 56px;
+    font-family: sans-serif;
+}
+
+button {
+    color: #fff;
+    background-color: chocolate;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    margin: 20px;
+}
+
+img {
+    /* border-radius: 50%; */
+    height: 200px;
+    width: 200px;
+    perspective: 1000px;
+    align-items: center;
+}
+
+.right-1{
+width: 100%;
+/* margin: 40px 40px; */
+align-items: center;
+
+
+}
+.list{
+  text-align: center  ;
+    /* width: 100%; */
+ display: block;
+ list-style-type:none;
+  border: 3px solid black;
+ list-style-position: inside;
+  border-radius: 10px;
+  transition: all 1s; 
+  margin: 5px;
+  background-color:silver;
+  padding: 0px 0px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+ 
+.contact{
+  
+    width: 20%;
+    height: 40vh;
+    border: 3px solid black;
+    margin: 10px 10px;
+    float: left;
+    text-align: center;
+    /* border-radius: 10px; */
+    transition: all 1s;
+    background-color: bisque;
+     margin-bottom: 150px;
+       animation-name: rotead;
+      animation-duration: 2s;
+      animation-fill-mode: forwards; 
+   }
+
+   .skil {
+      transform: translateY(100px); 
+      animation-name: bottomToTop;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      padding-left: 15%;
+      
+    }
+
+    .contact:hover{
+    border: 3px solid aqua;
+    transform: scale(1.1);
+ }
+
+ i{
+      
+    height: 70px;
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top:40px ;
+ }
+
+ .left{
+     animation-name: lefttoright;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+ }
+
+ .right{
+  animation-name: righttoleft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+ }
+
+
+     @keyframes toptobuttom {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(28px);
+      }
+    }
+
+    @keyframes lefttoright {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+     @keyframes righttoleft {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0px);
+      }
+    }
+
+      @keyframes rotead {
+      from {
+        transform: top(100px);
+        rotate: 360deg;
+      }
+      to {
+        transform: top(0);     
+      }
+    }
+
+    @media  (max-width:800px){
+      .body{
+        overflow-y: hidden;
+      }
+      .header{
+        display: flex;
+      }
+
+      .skil{
+        width: 100%;
+        padding-left: 70px;
+
+      }
+      .contact{
+        width: 50%;
+      }
+    }
